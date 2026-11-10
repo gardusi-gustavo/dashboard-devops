@@ -33,4 +33,10 @@ if ((progress.repositories ?? []).length) {
     "<table><thead><tr><th>Repository</th><th>Section</th><th>GitHub</th><th>Gitea</th><th>Archived</th><th>Bundle</th><th>Restore</th><th>Reconciled</th><th>Metadata</th><th>Ruleset</th><th>Tasks</th><th>Issues</th></tr></thead><tbody>" +
     progress.repositories.map((r) => `<tr><td>${r.repo}</td><td>${r.section}</td><td>${r.github}</td><td>${r.gitea}</td><td>${r.gitea_archived ? "yes" : "n/a"}</td><td>${r.bundle}</td><td>${r.restore}</td><td>${r.reconciled ? "pass" : "fail"}</td><td>${r.github_metadata ? "GH" : "-"}/${r.gitea_metadata ? "GT" : "-"}</td><td>${r.ruleset}</td><td>${r.tasks}</td><td>${r.issues_imported}</td></tr>`).join("") +
     "</tbody></table>";
+  const retired = progress.retired ?? [];
+  if (retired.length) {
+    progressEl.innerHTML += "<h2>Retired</h2><table><thead><tr><th>Repository</th><th>Head</th><th>Snapshots</th><th>Tags</th><th>Reason</th></tr></thead><tbody>" +
+      retired.map((r) => `<tr><td>${r.repo}</td><td>${(r.head ?? "-").slice(0, 8)}</td><td>${r.snapshots}</td><td>${r.tags}</td><td>${r.retirement?.reason ?? ""}</td></tr>`).join("") +
+      "</tbody></table>";
+  }
 }

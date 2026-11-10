@@ -9,7 +9,7 @@ permissions:
   id-token: write
 jobs:
   pages:
-    uses: gardusi-gustavo/.github/.github/workflows/reusable-pages.yml@v0.1.1
+    uses: gardusi-gustavo/.github/.github/workflows/reusable-pages.yml@v0.2.1
     with:
       build_command: bash infra/scripts/build.sh _database
       database_repository: gardusi-gustavo/database-devops
