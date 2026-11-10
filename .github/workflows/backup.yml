@@ -1,16 +1,17 @@
-name: pages
+name: backup
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: "43 2 * * *"
   workflow_dispatch:
 permissions:
   contents: read
-  pages: write
-  id-token: write
+  actions: read
 jobs:
-  pages:
-    uses: gardusi-gustavo/.github/.github/workflows/reusable-pages.yml@v0.2.1
+  backup:
+    uses: gardusi-gustavo/.github/.github/workflows/reusable-backup.yml@v0.2.1
     with:
-      build_command: bash infra/scripts/build.sh _database
-      database_repository: gardusi-gustavo/database-devops
-      database_path: _database
+      repository: gardusi-gustavo/dashboard-devops
+      retention: 3
+    secrets: inherit
