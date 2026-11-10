@@ -1,0 +1,18 @@
+{
+  "rank": "1.4",
+  "title": "Add PR quota tracking",
+  "context": "The one-PR-per-repo rule needs visibility.",
+  "limits": {
+    "max_commits": 5,
+    "max_file_changes": 4
+  },
+  "spec": {
+    "summary": "Show open PR counts per repository.",
+    "expected_outcome": "Quota violations are visible.",
+    "acceptance_criteria": [
+      "Counts are displayed",
+      "Data schema is enforced"
+    ]
+  },
+  "attempts": []
+}

@@ -1,0 +1,18 @@
+{
+  "rank": "2.2",
+  "title": "Add accessibility checks",
+  "context": "The static page should be usable.",
+  "limits": {
+    "max_commits": 5,
+    "max_file_changes": 4
+  },
+  "spec": {
+    "summary": "Add contrast and keyboard checks.",
+    "expected_outcome": "The page passes basic accessibility checks.",
+    "acceptance_criteria": [
+      "Checks are documented",
+      "CI is wired"
+    ]
+  },
+  "attempts": []
+}

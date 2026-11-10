@@ -1,0 +1,18 @@
+{
+  "rank": "2.1",
+  "title": "Document the metrics contract",
+  "context": "The dashboard depends on database-devops.",
+  "limits": {
+    "max_commits": 5,
+    "max_file_changes": 4
+  },
+  "spec": {
+    "summary": "Document the allowlisted fields and update cadence.",
+    "expected_outcome": "Consumers know the contract.",
+    "acceptance_criteria": [
+      "Fields are listed",
+      "Cadence is documented"
+    ]
+  },
+  "attempts": []
+}

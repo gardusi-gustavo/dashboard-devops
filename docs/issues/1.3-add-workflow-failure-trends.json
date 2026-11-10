@@ -1,0 +1,18 @@
+{
+  "rank": "1.3",
+  "title": "Add workflow failure trends",
+  "context": "Failures are only a current snapshot.",
+  "limits": {
+    "max_commits": 5,
+    "max_file_changes": 4
+  },
+  "spec": {
+    "summary": "Show a small trend from daily metrics.",
+    "expected_outcome": "A failing workflow is visible over time.",
+    "acceptance_criteria": [
+      "Trend is rendered",
+      "No raw logs are exposed"
+    ]
+  },
+  "attempts": []
+}

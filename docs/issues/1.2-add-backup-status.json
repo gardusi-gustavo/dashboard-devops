@@ -1,0 +1,18 @@
+{
+  "rank": "1.2",
+  "title": "Add backup status",
+  "context": "Backup health is not visible.",
+  "limits": {
+    "max_commits": 5,
+    "max_file_changes": 4
+  },
+  "spec": {
+    "summary": "Render backup success and freshness.",
+    "expected_outcome": "A stale backup is obvious.",
+    "acceptance_criteria": [
+      "Freshness is displayed",
+      "Failures are displayed"
+    ]
+  },
+  "attempts": []
+}

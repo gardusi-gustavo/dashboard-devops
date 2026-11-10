@@ -1,0 +1,18 @@
+{
+  "rank": "1.1",
+  "title": "Render repository health",
+  "context": "The dashboard needs a first useful view.",
+  "limits": {
+    "max_commits": 5,
+    "max_file_changes": 4
+  },
+  "spec": {
+    "summary": "Render repository status and PR counts from database-devops.",
+    "expected_outcome": "The page shows all public repositories.",
+    "acceptance_criteria": [
+      "Data is fetched from database-devops",
+      "Empty data is handled"
+    ]
+  },
+  "attempts": []
+}
